@@ -14,7 +14,7 @@ def parse_and_save_profiles(request):
     for nickname in nicknames:
         profile_nickname = nickname.text
 
-        # Проверяем существует ли никнеймом в базе данных, если да то не записываем, если нет то создаём
+        # Проверяем существует ли никнейм в базе данных, если да то не записываем, если нет то создаём
         if not Profile.objects.filter(nickname=profile_nickname).exists():
             Profile.objects.create(nickname=profile_nickname)
 
